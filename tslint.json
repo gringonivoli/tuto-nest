@@ -4,7 +4,8 @@
     "tslint:recommended"
   ],
   "jsRules": {
-    "no-unused-expression": true
+    "no-unused-expression": true,
+    "no-console": false
   },
   "rules": {
     "eofline": false,

@@ -1,6 +1,7 @@
 import { Controller, Post, Body, Get, Param, Put, Delete } from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
 
 @Controller('cats')
 export class CatsController {
@@ -14,7 +15,7 @@ export class CatsController {
 
   @Get()
   findAll(): Promise<Cat[]> {
-    this.catsService.findAll();
+    return this.catsService.findAll();
   }
 
   @Get(':id')
